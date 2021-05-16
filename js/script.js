@@ -13,12 +13,35 @@
     const removeTask = (index) => {
         nextYearTasks.splice(index, 1);
         render();
-    }
+    };
 
     const addNewTask = (newTaskContent) => {
 
         nextYearTasks.push({
             content: newTaskContent,
+        });
+    };
+
+    const toggleTaskDone = (index) => {
+        nextYearTasks[index].done = !nextYearTasks[index].done;
+        render();
+    };
+
+    const bindEvents = () => {
+        const removeButtons = document.querySelectorAll(".js-removeButton"); /* querySelectorAll zwraca pseudolistę dodanych przycisków po któych możemy iterować przy pomocy forEach */
+
+        removeButtons.forEach((removeButton, index) => {
+            removeButton.addEventListener("click", () => {
+                removeTask(index);
+            });
+        });
+
+        const doneButtons = document.querySelectorAll(".js-doneButton");
+
+        doneButtons.forEach((doneButton, index) => {
+            doneButton.addEventListener("click", () => {
+                toggleTaskDone(index);
+            });
         });
     };
 
@@ -52,13 +75,7 @@
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
-        const removeButtons = document.querySelectorAll(".js-removeButton"); /* querySelectorAll zwraca pseudolistę dodanych przycisków po któych możemy iterować przy pomocy forEach */
-
-        removeButtons.forEach((removeButton, index) => {
-            removeButton.addEventListener("click", () => {
-                removeTask(index);
-            });
-        });
+        bindEvents();
     };
 
     const init = () => {
