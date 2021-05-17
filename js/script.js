@@ -65,10 +65,10 @@
 
         for (const nextYearTask of nextYearTasks) {
             htmlString += `
-        <li class="${nextYearTask.done ? "taskDone" : ""}">
-        <button class="js-doneButton">zrobione?</button>
-        ${nextYearTask.content}
-        <button class="js-removeButton">usuń</button>
+        <li type="none" class="listItem ${nextYearTask.done ? "taskDone" : ""}">
+        <button class="button js-doneButton"></button>
+        ${nextYearTask.content} 
+        <button class="button button--remove js-removeButton"></button>
         </li>
         `;
         }
