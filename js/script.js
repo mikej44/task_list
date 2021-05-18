@@ -49,13 +49,17 @@
         event.preventDefault();
 
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const netTaskElement = document.querySelector(".js-newTask");
 
-        if (newTaskContent === "") {
-            return;
+        if (newTaskContent !== "") {
+            addNewTask(newTaskContent);
+            netTaskElement.value = "";
         }
-        addNewTask(newTaskContent);
+
 
         render();
+
+        netTaskElement.focus();
 
     };
 
