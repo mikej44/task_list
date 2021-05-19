@@ -44,6 +44,7 @@ body {
     align-items: center;
     text-align: center;
     border-bottom: 2px solid rgb(202, 198, 198);
+    padding: 4px;
 }
 
 .header2 {
@@ -80,8 +81,7 @@ body {
     width: 20px;
 }
 
-.newItem {
-   
+.newItemText {
     text-transform: uppercase;
 }
 

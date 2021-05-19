@@ -71,7 +71,7 @@
             ${nextYearTask.done ? "taskDone" : ""}
             ">
                 <button class="button js-doneButton"></button>
-                <span class="newItem">${nextYearTask.content} </span>
+                <span class="newItemText">${nextYearTask.content} </span>
                 <button class="button button--remove js-removeButton"></button>
         </li>
         `;
