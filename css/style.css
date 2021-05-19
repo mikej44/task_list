@@ -22,10 +22,13 @@ body {
     flex-direction: column;
     justify-content: center;
     border-radius: 5px;
+    position: relative;	
+    box-shadow: 4px 4px 5px 0px #9E9E9E;
 }
 
 .header {
     margin: 10px;
+    Font-family: „arial”, sans-serif; 
 }
 
 .container {
@@ -48,6 +51,7 @@ body {
     border-bottom-style: solid;
     border-bottom-width: 2px;
     padding-bottom: 10px;
+    Font-family: „arial”, sans-serif; 
 }
 
 .list {
@@ -76,6 +80,11 @@ body {
     width: 20px;
 }
 
+.newItem {
+   
+    text-transform: uppercase;
+}
+
 .button:hover {
     background-color: rgb(144, 230, 144);
 }
@@ -92,15 +101,15 @@ body {
     background-color: rgb(216, 141, 141);
 }
 
-.addButton {
+.form__addButton {
     background-color: rgb(29, 128, 128);
     color: white;
     border: none;
     padding: 5px;
-
+    Font-family: „arial”, sans-serif; 
 }
 
-.addButton:hover {
+.form__addButton:hover {
     background-color: rgb(65, 167, 167);   
 }
 
@@ -115,6 +124,8 @@ body {
         }
     
 
-    .input {
-     padding: 10px;   
+    .form__input {
+     padding: 10px; 
+     border: 2px solid rgb(196, 196, 196);
+     Font-family: „arial”, sans-serif; 
     }

@@ -48,31 +48,31 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
-        const netTaskElement = document.querySelector(".js-newTask");
+        const newTaskElement = document.querySelector(".js-newTask");
+        const newTaskContent = newTaskElement.value.trim();
 
         if (newTaskContent !== "") {
             addNewTask(newTaskContent);
-            netTaskElement.value = "";
+            newTaskElement.value = "";
         }
-
 
         render();
 
-        netTaskElement.focus();
+        newTaskElement.focus();
 
     };
-
 
     const render = () => {
         let htmlString = "";
 
         for (const nextYearTask of nextYearTasks) {
             htmlString += `
-        <li type="none" class="listItem ${nextYearTask.done ? "taskDone" : ""}">
-        <button class="button js-doneButton"></button>
-        ${nextYearTask.content} 
-        <button class="button button--remove js-removeButton"></button>
+        <li type="none" class="listItem 
+            ${nextYearTask.done ? "taskDone" : ""}
+            ">
+                <button class="button js-doneButton"></button>
+                <span class="newItem">${nextYearTask.content} </span>
+                <button class="button button--remove js-removeButton"></button>
         </li>
         `;
         }
