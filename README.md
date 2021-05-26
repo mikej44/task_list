@@ -10,6 +10,7 @@ This is my short training project for clean JavaScript objects, arrays and funct
 - JavaScript with ES6+
 - BEM
 - GRID
+- Immutability
 
 ## Demo
 https://mikej44.github.io/task_list/
@@ -19,6 +20,6 @@ You can:
  - add tasks
  - mark tasks as done
  - remove tasks
+ - hide tasks that are done
+ - mark all tasks as done
 
-### Note
-Default example inputs already added
