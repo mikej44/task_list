@@ -41,7 +41,7 @@
     };
 
     const finishAllTasks = () => {
-        nextYearTasks = nextYearTasks.map(task => ({...task, done: true}));
+        nextYearTasks = nextYearTasks.map(task => ({ ...task, done: true }));
         render();
     };
 
@@ -126,11 +126,10 @@
         if (nextYearTasks.length > 0) {
             htmlButtons +=
                 `<button class="js-hideTasksButton taskList__button">${hideDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
-                <button class="js-tasksDoneButton taskList__button" ${nextYearTasks.every(task => task.done) ? "disabled" : ""}>Ukończ wszystkie</button>`
+                <button class="js-tasksDoneButton taskList__button${nextYearTasks.every(task => task.done) ? "taskList__button--inactive" : ""}" ${nextYearTasks.every(task => task.done) ? "disabled" : ""}>Ukończ wszystkie</button>`
         } else {
             htmlButtons = "";
         };
-
         document.querySelector(".taskList__buttons").innerHTML = htmlButtons;
     };
 

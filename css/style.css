@@ -12,10 +12,17 @@ body {
 
 .taskDone {
     text-decoration: line-through;
+    font-family: 'Roboto Slab', serif;
 }
 
 .listItem--hide {
     visibility:hidden;
+}
+
+.taskList__button--inactive {
+  border: none;
+  background-color: white;
+  color: rgb(158, 165, 165);
 }
 
 .taskList {
@@ -28,11 +35,12 @@ body {
     border-radius: 5px;
     position: relative;
     box-shadow: 4px 4px 5px 0px #9E9E9E;
+    font-family: 'Roboto Slab', serif;
 }
 
 .header {
     margin: 10px;
-    Font-family: „arial”, sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
 
 .container {
@@ -49,6 +57,7 @@ body {
     text-align: center;
     border-bottom: 2px solid rgb(202, 198, 198);
     padding: 4px;
+    font-family: 'Roboto Slab', serif;
 }
 
 .header2 {
@@ -56,7 +65,7 @@ body {
     border-bottom-style: solid;
     border-bottom-width: 2px;
     padding-bottom: 10px;
-    Font-family: „arial”, sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
 
 .list {
@@ -82,6 +91,12 @@ body {
     padding: 10px;
     height: 20px;
     width: 20px;
+    transition: 1s;
+    font-family: 'Roboto Slab', serif;
+}
+
+.taskList__button:hover {
+    color: rgb(165, 197, 195);
 }
 
 .button--thick {
@@ -90,7 +105,7 @@ body {
 
 .taskList__buttons {
     display: grid;
-    grid-template-columns: 150px 150px;
+    grid-template-columns: 150px 160px;
     justify-content: right;
 }
 
@@ -108,10 +123,12 @@ body {
     background-color: white;
     color: rgb(31, 128, 123);
     font-weight: bold;
+    transition: 1s;
 }
 
 .newItemText {
     text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
 }
 
 .button:hover {
@@ -124,10 +141,11 @@ body {
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;
+    transition: 1s;
 }
 
 .button--remove:hover {
-    background-color: rgb(216, 141, 141);
+    background-color: rgb(221, 170, 170);
 }
 
 .form__addButton {
@@ -136,10 +154,12 @@ body {
     border: none;
     padding: 5px;
     Font-family: „arial”, sans-serif;
+    transition: 1s;
 }
 
 .form__addButton:hover {
     background-color: rgb(65, 167, 167);
+    transform: scale(1.1);
 }
 
 @media (max-width: 400px) {
@@ -155,5 +175,5 @@ body {
 .form__input {
     padding: 10px;
     border: 2px solid rgb(196, 196, 196);
-    Font-family: „arial”, sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
