@@ -1,7 +1,7 @@
 # Next Year Task List
 This is my short training project for clean JavaScript objects, arrays and functions.
 
-![demoPic](https://github.com/mikej44/task_list/blob/master/images/screen.png)
+![demoPic](https://github.com/mikej44/task_list/blob/master/images/screen2.png)
 
 ## Used Technologies
 
