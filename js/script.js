@@ -105,19 +105,30 @@
 
     const renderTasks = () => {
 
-        let htmlString = "";
+        /* let htmlString = "";
+ 
+         for (const nextYearTask of nextYearTasks) {
+             htmlString += `
+             <li type="none" class="listItem ${nextYearTask.done && hideDoneTasks ? "listItem--hide" : ""}"> 
+                 <button class="button js-doneButton ${nextYearTask.done ? "button--thick" : ""}"></button>
+                     <span class="listItem__text ${nextYearTask.done ? "taskDone" : ""}">${nextYearTask.content} </span>
+                 <button class="button button--remove js-removeButton"></button>
+             </li>
+             `;
+         };
+ 
+         document.querySelector(".js-tasks").innerHTML = htmlString;
+         //task render without immutability*/
 
-        for (const nextYearTask of nextYearTasks) {
-            htmlString += `
-            <li type="none" class="listItem ${nextYearTask.done && hideDoneTasks ? "listItem--hide" : ""}"> 
-                <button class="button js-doneButton ${nextYearTask.done ? "button--thick" : ""}"></button>
-                    <span class="listItem__text ${nextYearTask.done ? "taskDone" : ""}">${nextYearTask.content} </span>
-                <button class="button button--remove js-removeButton"></button>
-            </li>
-            `;
-        };
+        const taskHtml = nextYearTask => 
+            `<li type="none" class="listItem ${nextYearTask.done && hideDoneTasks ? "listItem--hide" : ""}"> 
+            <button class="button js-doneButton ${nextYearTask.done ? "button--thick" : ""}"></button>
+                <span class="listItem__text ${nextYearTask.done ? "taskDone" : ""}">${nextYearTask.content} </span>
+            <button class="button button--remove js-removeButton"></button>
+        </li>`;
+        
 
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+        document.querySelector(".js-tasks").innerHTML = nextYearTasks.map(taskHtml).join("");
     };
 
     const renderButtons = () => {
