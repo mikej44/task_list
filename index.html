@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/buttons.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/tasklist.css" rel="stylesheet">
     <link rel="icon" href="images/website icon.png">
     <meta property="og:image" content="images/share_pic.png">
     <script defer src="js/script.js"></script>
@@ -20,18 +24,18 @@
 <body>
 
     <div class="container">
-        <h1 class="header">Lista celów na przyszły rok</h1>
-        <div class="taskList">
-            <h2 class="header2">Dodaj cel</h2>
+        <h1 class="container__header">Lista celów na przyszły rok</h1>
+        <div class="container__taskList">
+            <h2 class="container__header2">Dodaj cel</h2>
             <form class="js-form form">
                 <input class="js-newTask form__input" placeholder="wpisz cel" autofocus>
                 <button class="js-addTask form__addButton"><b>DODAJ!</b></button>
             </form>
         </div>
 
-        <div class="taskList">
+        <div class="container__taskList">
+            <h2 class="container__header2">Lista celów</span></h2>
             <div class="taskList__buttons"></div>
-            <h2 class="header2">Lista celów</span></h2>
             <ul class="js-tasks list"></ul>
         </div>
     </div>

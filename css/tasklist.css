@@ -1,0 +1,43 @@
+.listItem {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 30px;
+    align-items: center;
+    border-bottom: 2px solid rgb(202, 198, 198);
+    padding: 4px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.listItem--hide {
+    display: none;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+}
+
+.listItem__text {
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    padding: 20px;
+}
+
+.container__taskList {
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 4px 4px 5px 0px #9E9E9E;
+    font-family: 'Roboto Slab', serif;
+}
+
+.taskDone {
+    text-decoration: line-through;
+    font-family: 'Roboto Slab', serif;
+}
+

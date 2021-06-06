@@ -1,0 +1,73 @@
+button {
+    cursor: pointer;
+}
+
+.taskList__buttons {
+    display: grid;
+    grid-template-columns: 150px 160px;
+    justify-content: right;
+}
+
+@media (max-width: 400px) {
+    .taskList__buttons {
+        display: grid;
+        grid-template-columns: 150px;
+        justify-content: center;
+        grid-gap: 10px;
+    }
+}
+
+.button {
+    margin: 7px;
+    background-color: rgb(19, 179, 19);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    border: none;
+    padding: 10px;
+    height: 20px;
+    width: 20px;
+    transition: 1s;
+    font-family: 'Roboto Slab', serif;
+}
+
+.button:hover {
+    background-color: rgb(144, 230, 144);
+}
+
+.button--thick {
+    background-image: url(../images/tick.jpg);
+}
+
+.taskList__button {
+    border: none;
+    background-color: transparent;
+    color: rgb(31, 128, 123);
+    font-weight: bold;
+    transition: 1s;
+    padding-bottom: 20px;
+}
+
+.taskList__button:hover {
+    color: rgb(165, 197, 195);
+}
+
+.taskList__button:disabled {
+    border: none;
+    background-color: transparent;
+    color: rgb(158, 165, 165);
+  }
+
+.button--remove {
+    background-color: red;
+    background-image: url(../images/rubbish.png);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    transition: 1s;
+}
+
+.button--remove:hover {
+    background-color: rgb(221, 170, 170);
+}
+

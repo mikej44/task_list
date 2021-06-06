@@ -1,0 +1,19 @@
+.container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(30px, 1100px);
+}
+
+.container__header {
+    margin: 10px;
+    padding-top: 30px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.container__header2 {
+    border-bottom: rgb(185, 181, 181);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    padding-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+}

@@ -111,7 +111,7 @@
             htmlString += `
             <li type="none" class="listItem ${nextYearTask.done && hideDoneTasks ? "listItem--hide" : ""}"> 
                 <button class="button js-doneButton ${nextYearTask.done ? "button--thick" : ""}"></button>
-                    <span class="newItemText ${nextYearTask.done ? "taskDone" : ""}">${nextYearTask.content} </span>
+                    <span class="listItem__text ${nextYearTask.done ? "taskDone" : ""}">${nextYearTask.content} </span>
                 <button class="button button--remove js-removeButton"></button>
             </li>
             `;
@@ -126,7 +126,7 @@
         if (nextYearTasks.length > 0) {
             htmlButtons +=
                 `<button class="js-hideTasksButton taskList__button">${hideDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
-                <button class="js-tasksDoneButton taskList__button${nextYearTasks.every(task => task.done) ? "taskList__button--inactive" : ""}" ${nextYearTasks.every(task => task.done) ? "disabled" : ""}>Ukończ wszystkie</button>`
+                <button class="js-tasksDoneButton taskList__button" ${nextYearTasks.every(task => task.done) ? "disabled" : ""}>Ukończ wszystkie</button>`
         } else {
             htmlButtons = "";
         };
